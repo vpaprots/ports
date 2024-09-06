@@ -1,0 +1,5 @@
+TIMESTAMP = 1725667436
+SHA256 (go/security_step-kms/step-kms-v0.11.4/v0.11.4.mod) = 0c47a6e58b45a22dbad09abf0eb474dc1bcb1219bb2d47928ccd87cb3f9a9bef
+SIZE (go/security_step-kms/step-kms-v0.11.4/v0.11.4.mod) = 5180
+SHA256 (go/security_step-kms/step-kms-v0.11.4/v0.11.4.zip) = 144836a7f0e90b040e3ff7a083c014c9906a1041707c26e82666e95cbc49eb95
+SIZE (go/security_step-kms/step-kms-v0.11.4/v0.11.4.zip) = 81069

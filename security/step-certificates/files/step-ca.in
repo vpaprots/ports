@@ -49,14 +49,14 @@ command_args="-S -c \
 start_precmd=step_ca_startprecmd
 start_postcmd=step_ca_postcmd
 
-extra_commands="configure"
+extra_commands="configure reload"
 configure_cmd="step_ca_configure"
 
 step_ca_startprecmd()
 {
-        if [ ! -e ${pidfile} ]; then
-                install -o ${step_ca_user} -g ${step_ca_group} /dev/null ${pidfile};
-        fi
+	if [ ! -e ${pidfile} ]; then
+		install -o ${step_ca_user} -g ${step_ca_group} /dev/null ${pidfile};
+	fi
 
 	if [ ! -e ${step_ca_steppath} ]; then
 		echo "No configured Step CA found."
@@ -90,7 +90,7 @@ step_ca_configure() {
 	if [ ! -e ${step_ca_steppath} ]; then
 		echo "No configured Step CA found."
 		echo "Creating new one...."
-		install -d -m 600 -o ${step_ca_user} -g ${step_ca_group} ${step_ca_steppath}
+		install -d -m 700 -o ${step_ca_user} -g ${step_ca_group} ${step_ca_steppath}
 		export STEPPATH=${step_ca_steppath}
 		%%PREFIX%%/bin/step ca init --ssh
 		chown -R ${step_ca_user}:${step_ca_group} ${step_ca_stepdir}
